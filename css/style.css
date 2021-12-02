@@ -1,0 +1,142 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+*::before,
+*::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  color: #858fad;
+  background-image: url("../images/bg-pattern.svg");
+  background-repeat: no-repeat;
+  background-size: 130rem;
+  font-family: "Manrope", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 600;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  justify-items: center;
+}
+
+.container {
+  width: 87%;
+  max-width: 40rem;
+  text-align: center;
+  margin-top: 4rem;
+}
+
+.content__header {
+  background-image: url("../images/pattern-circles.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 5rem 0;
+}
+.content__header > *:nth-child(2) {
+  margin-bottom: 0.5rem;
+}
+.content__heading {
+  color: #293356;
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+.content__text {
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+.content__text--main {
+  font-size: 1.3rem;
+  max-width: 20rem;
+  margin: 0 auto;
+}
+.content__text--views {
+  font-weight: 600;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+}
+.content__text--discount {
+  font-size: 1rem;
+  padding: 0 1rem;
+  color: #ff8c66;
+  background-color: #feece7;
+  border-radius: 5rem;
+  font-weight: 600;
+  overflow: hidden;
+}
+.content__box {
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px;
+  margin-top: 2rem;
+  padding: 3rem 2rem;
+}
+.content__wrapper-text {
+  margin: 2rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+.content__slider {
+  width: 100%;
+  margin: 2rem 0;
+}
+.content__num {
+  font-size: 1.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.content__num-span {
+  color: #293356;
+  font-size: 3rem;
+  font-weight: 800;
+}
+.attribution {
+  font-size: 1rem;
+  text-align: center;
+  margin-block: 1rem;
+}
+.attribution__link:link, .attribution__link:visited {
+  text-transform: uppercase;
+  transition: all 0.3s;
+}
+
+/*# sourceMappingURL=style.css.map */

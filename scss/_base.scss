@@ -53,8 +53,18 @@ html {
 
 body {
   min-height: 100vh;
+  color: $color-primary;
+  background: {
+    image: url('../images/bg-pattern.svg');
+    repeat: no-repeat;
+    size: 130rem;
+  }
   font-family: 'Manrope', sans-serif;
   font-size: 1.6rem;
+  font-weight: 600;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  justify-items: center;
 }
