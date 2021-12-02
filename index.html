@@ -1,39 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Interactive pricing component</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <script defer src="js/script.js"></script>
 
-  Simple, traffic-based pricing
-  Sign-up for our 30-day trial. No credit card required. 
+    <title>Frontend Mentor | Interactive Pricing Component</title>
+  </head>
+  <body>
+    <div class="container">
+      <header class="content__header">
+        <h1 class="content__heading">Simple, traffic-based pricing</h1>
+        <p class="content__text">
+          Sign-up for our 30-day trial. No credit card required.
+        </p>
+      </header>
+      <main class="content">
+        <div class="content__wrapper-top">
+          <p class="content__text">100K pageviews</p>
 
-  Pageviews
-  $ /month
+          <input
+            class="conten__slider"
+            type="range"
+            id="price"
+            name="price"
+            min="0"
+            max="10"
+            value="3"
+            step="5"
+          />
 
-  Monthly Billing
-  Yearly Billing 25% discount
+          <p class="content__num">
+            <span class="content__num-span">$16</span>/ per month
+          </p>
 
-  Unlimited websites
-  100% data ownership
-  Email reports
+          <div class="content__wrapper-text">
+            <label for="monthly" class="content__text">Monthly Billing</label>
+            <input type="checkbox" id="monthly" name="monthly" />
 
-  Start my trial
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+            <p class="content__text">Yearly Billing</p>
+            <p class="content__discount">25% discount</p>
+          </div>
+        </div>
+
+        <div class="content__wrapper-bottom">
+          <ul class="content__list">
+            <li class="content__item">Unlimited websites</li>
+            <li class="content__item">100% data ownership</li>
+            <li class="content__item">Email reports</li>
+          </ul>
+
+          <button class="content__btn">Start my trial</button>
+        </div>
+      </main>
+
+      <footer class="attribution">
+        Challenge by
+        <a
+          class="attribution__link"
+          href="https://www.frontendmentor.io?ref=challenge"
+          target="_blank"
+          >Frontend Mentor</a
+        >. Coded by
+        <a
+          class="attribution__link"
+          href="https://github.com/kens-visuals"
+          target="_blank"
+          >Kens-Visuals</a
+        >.
+      </footer>
+    </div>
+  </body>
 </html>
+
+<!-- Here are the different page view ranges and the corresponding monthly price totals:
+
+- 10K pageviews / $8 per month
+- 50K pageviews / $12 per month
+- 100K pageviews / $16 per month
+- 500k pageviews / $24 per month
+- 1M pageviews / $36 per month
+
+If the visitor switches the toggle to yearly billing, a 25% discount should be applied to all prices. -->
