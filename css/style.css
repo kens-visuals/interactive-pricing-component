@@ -1,3 +1,4 @@
+@charset "UTF-8";
 *,
 *::before,
 *::after {
@@ -48,7 +49,6 @@ body {
   font-size: 1.6rem;
   font-weight: 600;
   text-rendering: optimizeSpeed;
-  line-height: 1.5;
   display: grid;
   grid-template-rows: 1fr auto;
   justify-items: center;
@@ -56,7 +56,7 @@ body {
 
 .container {
   width: 87%;
-  max-width: 40rem;
+  max-width: 60rem;
   text-align: center;
   margin-top: 4rem;
 }
@@ -65,7 +65,7 @@ body {
   background-image: url("../images/pattern-circles.svg");
   background-repeat: no-repeat;
   background-position: center;
-  padding: 5rem 0;
+  padding: 5.5rem 0;
 }
 .content__header > *:nth-child(2) {
   margin-bottom: 0.5rem;
@@ -102,20 +102,40 @@ body {
 .content__box {
   background-color: white;
   border-radius: 0.5rem;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px;
-  margin-top: 2rem;
-  padding: 3rem 2rem;
+  box-shadow: rgba(41, 51, 86, 0.1) 0px 10px 40px -5px;
+  margin-top: 1rem;
+}
+.content__wrapper-top {
+  padding: 3.5rem 1rem;
 }
 .content__wrapper-text {
-  margin: 2rem 0;
+  margin: 3rem 0 1rem 0;
   display: flex;
   align-items: center;
   justify-content: flex-end;
   gap: 1rem;
 }
+.content__wrapper-bottom {
+  border-top: 0.1rem solid #eaeefb;
+  padding: 2.5rem 1rem 3rem 1rem;
+}
 .content__slider {
-  width: 100%;
-  margin: 2rem 0;
+  width: 90%;
+  height: 0.8rem;
+  border-radius: 1rem;
+  background-color: #eaeefb;
+  margin: 3rem 0;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+.content input[type=”range”]::-webkit-slider-thumb,
+.content input[type=”range”]::-moz-range-thumb,
+.content input[type=”range”]::-ms-thumb {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 .content__num {
   font-size: 1.3rem;
@@ -129,14 +149,46 @@ body {
   font-size: 3rem;
   font-weight: 800;
 }
+.content__list {
+  list-style: none;
+}
+.content__item {
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+.content__item::before {
+  content: url("../images/icon-check.svg");
+  width: 2rem;
+  margin-right: 1.5rem;
+}
+.content__btn {
+  color: #bdccff;
+  background-color: #293356;
+  font-size: 1.25rem;
+  border: 0;
+  border-radius: 5rem;
+  margin-top: 2rem;
+  padding: 1rem 4.5rem;
+  transition: color 0.3s;
+}
+.content__btn:hover {
+  color: white;
+  cursor: pointer;
+}
+
 .attribution {
   font-size: 1rem;
   text-align: center;
   margin-block: 1rem;
 }
 .attribution__link:link, .attribution__link:visited {
+  color: #10d5c2;
   text-transform: uppercase;
   transition: all 0.3s;
+}
+.attribution__link:hover, .attribution__link:active {
+  color: #a5f3eb;
 }
 
 /*# sourceMappingURL=style.css.map */

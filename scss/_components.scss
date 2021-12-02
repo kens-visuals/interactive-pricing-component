@@ -7,7 +7,7 @@
       repeat: no-repeat;
       position: center;
     }
-    padding: 5rem 0;
+    padding: 5.5rem 0;
 
     & > *:nth-child(2) {
       margin-bottom: 0.5rem;
@@ -51,17 +51,17 @@
   &__box {
     background-color: $color-secondary;
     border-radius: 0.5rem;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px;
-    margin-top: 2rem;
-    padding: 3rem 2rem;
+    box-shadow: rgba($color-secondary--dark, 0.1) 0px 10px 40px -5px;
+    margin-top: 1rem;
   }
 
   &__wrapper {
     &-top {
+      padding: 3.5rem 1rem;
     }
 
     &-text {
-      margin: 2rem 0;
+      margin: 3rem 0 1rem 0;
       display: flex;
       align-items: center;
       justify-content: flex-end;
@@ -69,12 +69,34 @@
     }
 
     &-bottom {
+      border-top: 0.1rem solid $color-primary--light;
+      padding: 2.5rem 1rem 3rem 1rem;
     }
   }
 
   &__slider {
-    width: 100%;
-    margin: 2rem 0;
+    width: 90%;
+    height: 0.8rem;
+    border-radius: 1rem;
+    background-color: $color-primary--light;
+    margin: 3rem 0;
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    &::-webkit-slider-runnable-track,
+    &::-moz-range-track,
+    &::-ms-track {
+    }
+  }
+
+  input[type='”range”']::-webkit-slider-thumb,
+  input[type='”range”']::-moz-range-thumb,
+  input[type='”range”']::-ms-thumb {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
   }
 
   &__num {
@@ -96,12 +118,35 @@
   }
 
   &__list {
+    list-style: none;
   }
 
   &__item {
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+
+    &::before {
+      content: url('../images/icon-check.svg');
+      width: 2rem;
+      margin-right: 1.5rem;
+    }
   }
 
   &__btn {
+    color: $color-blue;
+    background-color: $color-secondary--dark;
+    font-size: 1.25rem;
+    border: 0;
+    border-radius: 5rem;
+    margin-top: 2rem;
+    padding: 1rem 4.5rem;
+    transition: color 0.3s;
+
+    &:hover {
+      color: $color-secondary;
+      cursor: pointer;
+    }
   }
 }
 
@@ -112,13 +157,13 @@
 
   &__link:link,
   &__link:visited {
+    color: $color-cyan--dark;
     text-transform: uppercase;
-    // color: $color-primary--light;
     transition: all 0.3s;
   }
 
   &__link:hover,
   &__link:active {
-    // color: $color-secondary;
+    color: $color-cyan;
   }
 }
