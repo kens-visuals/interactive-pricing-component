@@ -8,8 +8,16 @@ const checkbox = document.querySelector('.js-checkbox');
 const numsArr = ['8', '12', '16', '24', '36'];
 const viewsArr = ['10K', '50K', '100K', '500k', '1M'];
 
-checkbox.addEventListener('change', (e) => {
-  e.target.checked ? (isChecked = true) : (isChecked = false);
+checkbox.addEventListener('click', (e) => {
+  if (e.target.checked) {
+    const number = +num.textContent.slice(1);
+
+    isChecked = true;
+    num.textContent = `$${number - number * 0.25}.00`;
+  } else {
+    isChecked = false;
+    num.textContent = `$${numsArr[slider.value - 1]}.00`;
+  }
 });
 
 console.log(isChecked);
