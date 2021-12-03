@@ -55,6 +55,7 @@ body {
   min-height: 100vh;
   color: $color-primary;
   background: {
+    color: rgba($color-primary--dark, 0.1);
     image: url('../images/bg-pattern.svg');
     repeat: no-repeat;
     size: 130rem;
@@ -66,4 +67,8 @@ body {
   display: grid;
   grid-template-rows: 1fr auto;
   justify-items: center;
+
+  @media (min-width: 810px) {
+    background-size: 170rem;
+  }
 }

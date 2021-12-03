@@ -27,10 +27,7 @@
       <header class="content__header">
         <h1 class="content__heading">Simple, traffic-based pricing</h1>
         <p class="content__text content__text--main">
-          Sign-up for our 30-day trial.
-        </p>
-        <p class="content__text content__text--main">
-          No credit card required.
+          Sign-up for our 30-day trial. No credit card required.
         </p>
       </header>
 
@@ -53,15 +50,19 @@
           </p>
 
           <div class="content__wrapper-text">
-            <label for="monthly" class="content__text">Monthly Billing</label>
-            <input
-              type="checkbox"
-              id="monthly"
-              name="monthly"
-              class="content__checkbox"
-            />
+            <p class="content__text content__text--billing">Monthly Billing</p>
 
-            <p class="content__text">Yearly Billing</p>
+            <label for="monthly" class="content__label">
+              <input
+                type="checkbox"
+                id="monthly"
+                name="monthly"
+                class="content__checkbox"
+              />
+              <span class="content__label-span"></span>
+            </label>
+
+            <p class="content__text content__text--billing">Yearly Billing</p>
             <p class="content__text content__text--discount">-25%</p>
           </div>
         </div>

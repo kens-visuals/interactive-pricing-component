@@ -1,6 +1,14 @@
 .container {
   width: 87%;
-  max-width: 60rem;
+  max-width: 54rem;
   text-align: center;
   margin-top: 4rem;
+
+  @media (min-width: 810px) {
+    text-align: left;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0;
+  }
 }

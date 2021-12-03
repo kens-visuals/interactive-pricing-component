@@ -12,65 +12,109 @@
     & > *:nth-child(2) {
       margin-bottom: 0.5rem;
     }
+
+    @media (min-width: 810px) {
+      text-align: center;
+    }
   }
 
   &__heading {
     color: $color-secondary--dark;
-    font-size: 2rem;
+    font-size: clamp(2rem, 4vw, 2.8rem);
     font-weight: 800;
     margin-bottom: 1rem;
   }
 
   &__text {
-    font-size: 1.2rem;
-    font-weight: 400;
+    font-size: clamp(1.2rem, 2vw, 1.6rem);
 
     &--main {
-      font-size: 1.3rem;
-      max-width: 20rem;
+      font-size: clamp(1.3rem, 2vw, 1.5rem);
+      max-width: 18rem;
       margin: 0 auto;
+      line-height: 1.8;
+
+      @media (min-width: 810px) {
+        max-width: 45rem;
+      }
     }
 
     &--views {
-      font-weight: 600;
+      font-size: 1.4rem;
+      font-weight: 800;
       letter-spacing: 0.2rem;
       text-transform: uppercase;
     }
 
+    &--billing {
+      font-size: 1.2rem;
+    }
+
     &--discount {
       font-size: 1rem;
-      padding: 0 1rem;
+      padding: 0.2rem 0.8rem;
       color: $color-orange;
       background-color: $color-orange--light;
       border-radius: 5rem;
-      font-weight: 600;
-      overflow: hidden;
+
+      @media (min-width: 810px) {
+        &::after {
+          content: 'discount';
+          font-size: inherit;
+          margin-left: 0.3rem;
+        }
+      }
     }
   }
 
   &__box {
     background-color: $color-secondary;
-    border-radius: 0.5rem;
+    border-radius: 1rem;
     box-shadow: rgba($color-secondary--dark, 0.1) 0px 10px 40px -5px;
     margin-top: 1rem;
+
+    @media (min-width: 810px) {
+      margin: 3rem 0;
+    }
   }
 
   &__wrapper {
     &-top {
       padding: 3.5rem 1rem;
+
+      @media (min-width: 810px) {
+        padding: 3.5rem 5rem;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        align-items: center;
+      }
     }
 
     &-text {
-      margin: 3rem 0 1rem 0;
+      margin-top: 3.5rem;
       display: flex;
       align-items: center;
       justify-content: flex-end;
       gap: 1rem;
+
+      @media (min-width: 810px) {
+        margin: 1.5rem 0.6rem 0 0;
+        grid-column: 1 / -1;
+        justify-self: end;
+      }
     }
 
     &-bottom {
       border-top: 0.1rem solid $color-primary--light;
       padding: 2.5rem 1rem 3rem 1rem;
+
+      @media (min-width: 810px) {
+        padding: 2.5rem 5rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
     }
   }
 
@@ -79,42 +123,141 @@
     height: 0.8rem;
     border-radius: 1rem;
     background-color: $color-primary--light;
-    margin: 3rem 0;
+    margin: 4rem 0;
     cursor: pointer;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
 
-    &::-webkit-slider-runnable-track,
-    &::-moz-range-track,
-    &::-ms-track {
+    @media (min-width: 810px) {
+      width: 100%;
+      margin: 3rem 0;
+      grid-column: 1 / -1;
+      grid-row: 2 / 3;
+    }
+
+    &::-webkit-slider-thumb {
+      width: 4rem;
+      height: 4rem;
+      background: {
+        color: $color-cyan--dark;
+        image: url('../images/icon-slider.svg');
+        repeat: no-repeat;
+        position: center;
+      }
+      border: 0;
+      border-radius: 50%;
+      box-shadow: 0 15px 15px 5px $color-cyan;
+      cursor: ew-resize;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      transition: background 0.3s ease-in-out;
+    }
+
+    &::-moz-range-thumb {
+      width: 4rem;
+      height: 4rem;
+      background: {
+        color: $color-cyan--dark;
+        image: url('../images/icon-slider.svg');
+        repeat: no-repeat;
+        position: center;
+      }
+      border: 0;
+      border-radius: 50%;
+      box-shadow: 0 15px 15px 5px $color-cyan;
+      cursor: ew-resize;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      transition: background 0.3s ease-in-out;
+    }
+
+    &::-ms-thumb {
+      width: 4rem;
+      height: 4rem;
+      background: {
+        color: $color-cyan--dark;
+        image: url('../images/icon-slider.svg');
+        repeat: no-repeat;
+        position: center;
+      }
+      border: 0;
+      border-radius: 50%;
+      box-shadow: 0 15px 15px 5px $color-cyan;
+      cursor: ew-resize;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      transition: background 0.3s ease-in-out;
     }
   }
 
-  input[type='”range”']::-webkit-slider-thumb,
-  input[type='”range”']::-moz-range-thumb,
-  input[type='”range”']::-ms-thumb {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-  }
-
   &__num {
-    font-size: 1.3rem;
+    font-size: clamp(1.5rem, 2vw, 1.6rem);
+    font-weight: 600;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 1rem;
 
+    @media (min-width: 810px) {
+      justify-content: end;
+    }
+
     &-span {
       color: $color-secondary--dark;
-      font-size: 3rem;
+      font-size: clamp(3.1rem, 4vw, 3.8rem);
       font-weight: 800;
     }
   }
 
+  &__label {
+    width: 4rem;
+    height: 2.1rem;
+    position: relative;
+    display: inline-block;
+
+    @media (min-width: 810px) {
+      margin: 0 1rem;
+    }
+
+    &-span {
+      background-color: $color-primary--dark;
+      border-radius: 1rem;
+      position: absolute;
+      cursor: pointer;
+      inset: 0;
+      transition: all 0.3s;
+
+      &::before {
+        content: '';
+        width: 1.4rem;
+        height: 1.4rem;
+        border-radius: 50%;
+        background-color: $color-secondary;
+        position: absolute;
+        top: 50%;
+        left: 0.3rem;
+        transform: translateY(-50%);
+        transition: all 0.3s;
+      }
+    }
+  }
+
   &__checkbox {
-    // margin: 0 1rem;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    &:checked + .content__label-span {
+      background-color: #7ce8dc;
+    }
+
+    &:checked + .content__label-span:before {
+      transform: translate(2rem, -50%);
+    }
   }
 
   &__list {
@@ -146,6 +289,10 @@
     &:hover {
       color: $color-secondary;
       cursor: pointer;
+    }
+
+    @media (min-width: 810px) {
+      margin: 0;
     }
   }
 }
