@@ -11,7 +11,6 @@ const viewsArr = ['10K', '50K', '100K', '500k', '1M'];
 
 // Helpers
 const countDiscount = (num) => num - num * 0.25;
-
 const validateChecked = (num) =>
   isChecked ? `$${countDiscount(num)}.00` : `$${num}.00`;
 
@@ -54,8 +53,11 @@ const reset = function () {
         hsl(226, 68%, 95%) 50%)`;
 
   slider.value = 3;
+  isChecked = false;
   checkbox.checked = false;
   slider.style.background = color;
+  num.textContent = `$${numsArr[2]}.00`;
+  view.textContent = `${viewsArr[2]} pageviews`;
 };
 
 // Events
