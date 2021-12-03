@@ -11,6 +11,7 @@ const viewsArr = ['10K', '50K', '100K', '500k', '1M'];
 
 // Helpers
 const countDiscount = (num) => num - num * 0.25;
+
 const validateChecked = (num) =>
   isChecked ? `$${countDiscount(num)}.00` : `$${num}.00`;
 
